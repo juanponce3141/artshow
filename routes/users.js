@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const db = require('../db/queries');
+const db = require('../db/query');
 
 
 /* GET users listing. */

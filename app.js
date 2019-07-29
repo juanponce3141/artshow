@@ -28,8 +28,8 @@ app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/art', artRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/art', artRouter);
 
 
 
