@@ -6,7 +6,7 @@ This project provides API endpoints to postgres database.
 
 
 ## Requirement
-Connection to instance of postgres database will be required. (Note: Our application does not configure Tatabase or Tables, these were done directly with psql)
+Connection to instance of postgres database will be required. (Note: Our application does not configure Database or Tables, these were done directly with psql)
 
 Configuration to database will have to be filled in db/query.js as this is handling database connection/querys to postgres.
 
