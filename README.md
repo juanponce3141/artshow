@@ -6,7 +6,20 @@ This project provides API endpoints to postgres database.
 
 
 ## Requirement
-Credentials will be required in db/query.js as this is handling database connection to postgres.
+Connection to instance of postgres database will be required. (Note: Our application does not configure Tatabase or Tables, these were done directly with psql)
+
+Configuration to database will have to be filled in db/query.js as this is handling database connection/querys to postgres.
+
+Please fill in pool configration as seen below with own credentails to database.
+
+Example : 
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'art',
+    password: 'someSecretPassword',
+    port: 5433
+});
 
 ## StartProject
 start project with :
