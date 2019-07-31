@@ -35,3 +35,5 @@ class Queue {
         return temp.value;
     }
 }
+
+exports.Queue = Queue;
