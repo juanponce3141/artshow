@@ -9,15 +9,15 @@ module.exports = (app) => {
       }));
     
     app.post('/api/users', clientController.create);
-    app.get('/api/users', clientController.create);
+    app.get('/api/users', clientController.retrieve);
+    app.delete('/api/users', clientController.destroy);
 
     app.post('/api/users/maxBid', (req, res) => {
 
         // Only happen if 3 members are available to bid and in unsold state
         // Logic to test
 
-        // clientController.updateBid(req, res)
-        console.log(countHelper.retrieve(req, res)); // <= we'll let helper decide the controller, pass controller as callback?
+        countHelper.retrieve(req, res, clientController.updateBid)
     });
 
 
