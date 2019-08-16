@@ -27,9 +27,14 @@ app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/api/users', usersRouter);
-app.use('/api/art', artRouter);
+// app.use('/', indexRouter);
+// app.use('/api/users', usersRouter);
+// app.use('/api/art', artRouter);
+
+require('./server/routes')(app);
+app.get('*', (req, res) => res.status(200).send({
+  message: 'Welcome to the beginning of nothingness.',
+}));
 
 
 
